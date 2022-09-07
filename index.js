@@ -211,6 +211,7 @@ Practice accessing data above by console.log-ing following items:
 
 console.log(artists[0].name);
 
+
 //(2) Bio of the third artist (2nd index) in the array 
 
 console.log(artists[2].bio);
@@ -230,13 +231,16 @@ Use getArtistByIndex to do the following:
 3. Return a string in the format `the artist at index {id} is {name}`
 ❗❗ NOTE: THE STRING YOU RETURN MUST MATCH THE FORMAT ABOVE OR IT WILL NOT PASS THE TEST! ❗❗
 
-🌟 EXAMPLE: if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo
- Modigliani` */
+🌟 EXAMPLE: if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
 function getArtistByIndex(array, indexN) {
-   return `the artist at index ${indexN} is 
-${array[indexN].name}`;
+  const artistName = array[indexN].name; 
+  return `the artist at index ${indexN} is ${artistName}`;
 }
+
+getArtistByIndex(artists, 0);
+
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use listOfNames to do the following: 
@@ -248,11 +252,14 @@ Use listOfNames to do the following:
 
 function listOfNames(array) {
   const arrayOfNames = [...array];
-  for (let i = 0; i < array.length; i++){
-console.log(arrayOfNames[i].name);
-}
+  const newArray = [];
+for(let i = 0; i < arrayOfNames.length; i++){
+  newArray.push(arrayOfNames[i].name);
+} 
+  return newArray;
 }
 
+console.log(listOfNames(artists));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -267,8 +274,11 @@ Use removeArtist to do the following:
 function removeArtist(array, index) {
   const removedArtistArray = [...array];
   removedArtistArray.splice(index, 1);
-  return(removedArtistArray);
+   return(removedArtistArray);
 }
+
+removeArtist(artists, 0);
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -287,8 +297,7 @@ Use addArtist to do the following:
 5. Add the newly created object to the copied array, then return the copied array
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
-function addArtist(array, artName, artYears, artGenre, 
-artNationality, artBio) {
+function addArtist(array, artName, artYears, artGenre, artNationality, artBio) {
   const addedArtistArr = [...array];
   const newArtist = {
     name: artName,
@@ -301,8 +310,9 @@ artNationality, artBio) {
   return(addedArtistArr);
 }
 
-addArtist(artists, 'Kaleb', '2001-2022', 'Murals', 
-'American', 'He loved to paint cars!');
+addArtist(artists, 'Kaleb', '2001-2022', 'Murals', 'American', 'He loved to paint cars!');
+
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
@@ -313,14 +323,17 @@ Use lotsOfArt to do the following:
 */
 
 function lotsOfArt(array) {
-   const oneHundredPaintings = [];
+  const oneHundredPaintings = [];
    for(let i = 0; i < array.length; i++){
      if(array[i].paintings > 99){
-       oneHundredPaintings.push(array[i]);
+       oneHundredPaintings.push(array[i].name);
      }
    }
    return oneHundredPaintings;
-}
+ }
+ 
+ console.log(lotsOfArt(artists));
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 8: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -334,7 +347,7 @@ Use artistInfo to do the following:
 */
 
 function artistInfo(array, artName){
-    for(let i = 0; i < array.length; i++){
+  for(let i = 0; i < array.length; i++){
     if(array[i].name === artName){
       return(array[i].bio);
     }
@@ -342,6 +355,8 @@ function artistInfo(array, artName){
 }
 
 artistInfo(artists, 'El Greco');
+
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 9: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use artistByCountry to do the following: 
@@ -354,15 +369,18 @@ Use artistByCountry to do the following:
 */
 
 function artistByCountry(array, artNationality){
-    const nationArray = []
+  const nationArray = []
   for(let i = 0; i < array.length; i++){
     if(array[i].nationality === artNationality){
-      nationArray.unshift(array[i].name);
+      nationArray.push(array[i].name);
     }
-  }  
-  console.log(nationArray);
-}   
-   
+  }
+  return(nationArray);
+}
+
+console.log(artistByCountry(artists, "Spanish"));
+
+
 
 /* ***** END OF TASKS ***** */
 
