@@ -258,7 +258,7 @@ delete arrayOfNames[i]["wikipedia"];
 delete arrayOfNames[i]["paintings"];
 delete arrayOfNames[i]["bio"];
 delete arrayOfNames[i]["years"];
-} console.log(arrayOfNames);
+} return(arrayOfNames);
 }
 
 listOfNames(artists);
@@ -276,7 +276,7 @@ Use removeArtist to do the following:
 function removeArtist(array, index) {
   const removedArtistArray = [...array];
   removedArtistArray.splice(index, 1);
-  console.log(removedArtistArray);
+  return(removedArtistArray);
 }
 
 removeArtist(artists, 0);
@@ -308,7 +308,7 @@ artNationality, artBio) {
     bio: artBio
   }
   addedArtistArr.push(newArtist);
-  console.log(addedArtistArr);
+  return(addedArtistArr);
 }
 
 addArtist(artists, 'Kaleb', '2001-2022', 'Murals', 
@@ -332,7 +332,7 @@ function lotsOfArt(array) {
    return oneHundredPaintings;
 }
 
- console.log(lotsOfArt(artists));
+ lotsOfArt(artists);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 8: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use artistInfo to do the following: 
@@ -347,7 +347,7 @@ Use artistInfo to do the following:
 function artistInfo(array, artName){
     for(let i = 0; i < array.length; i++){
     if(array[i].name === artName){
-      console.log(array[i].bio);
+      return(array[i].bio);
     }
   }
 }
@@ -371,7 +371,7 @@ function artistByCountry(array, artNationality){
       nationArray.unshift(array[i]);
     }
   }
-  console.log(nationArray);
+  return(nationArray);
 }
 
 artistByCountry(artists, "Spanish");
