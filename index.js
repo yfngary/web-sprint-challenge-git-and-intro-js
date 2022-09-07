@@ -234,8 +234,8 @@ Use getArtistByIndex to do the following:
 
 function getArtistByIndex(array, indexN) {
   const artistName = array[indexN].name;
-  return `the artist at index ${indexN} is 
-${artistName}`;
+   console.log(`the artist at index ${indexN} is 
+${artistName}`);
 }
 
 getArtistByIndex(artists, 0);
@@ -368,7 +368,7 @@ function artistByCountry(array, artNationality){
   console.log(nationArray);
 }   
    
-artistByCountry(artists, "Spanish");
+console.log(artistByCountry(artists, "Spanish"));
 
 /* ***** END OF TASKS ***** */
 
