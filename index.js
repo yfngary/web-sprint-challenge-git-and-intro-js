@@ -238,8 +238,6 @@ function getArtistByIndex(array, indexN) {
 ${array[indexN].name}`;
 }
 
-getArtistByIndex(artists, 0);
-
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use listOfNames to do the following: 
 1. Receive the artist array as an argument from a parameter 
@@ -255,7 +253,6 @@ console.log(arrayOfNames[i].name);
 }
 }
 
-listOfNames(artists);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -273,7 +270,6 @@ function removeArtist(array, index) {
   return(removedArtistArray);
 }
 
-removeArtist(artists, 0);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -326,7 +322,6 @@ function lotsOfArt(array) {
    return oneHundredPaintings;
 }
 
- lotsOfArt(artists);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 8: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use artistInfo to do the following: 
@@ -368,7 +363,6 @@ function artistByCountry(array, artNationality){
   console.log(nationArray);
 }   
    
-console.log(artistByCountry(artists, "Spanish"));
 
 /* ***** END OF TASKS ***** */
 
