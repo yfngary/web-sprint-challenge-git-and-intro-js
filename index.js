@@ -235,7 +235,7 @@ Use getArtistByIndex to do the following:
 
 function getArtistByIndex(array, indexN) {
    return `the artist at index ${indexN} is 
-${array[indexN].name}`);
+${array[indexN].name}`;
 }
 
 getArtistByIndex(artists, 0);
