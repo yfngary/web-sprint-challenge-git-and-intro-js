@@ -230,12 +230,12 @@ Use getArtistByIndex to do the following:
 3. Return a string in the format `the artist at index {id} is {name}`
 ❗❗ NOTE: THE STRING YOU RETURN MUST MATCH THE FORMAT ABOVE OR IT WILL NOT PASS THE TEST! ❗❗
 
-🌟 EXAMPLE: if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
+🌟 EXAMPLE: if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo
+ Modigliani` */
 
 function getArtistByIndex(array, indexN) {
-  const artistName = array[indexN].name;
-   console.log(`the artist at index ${indexN} is 
-${artistName}`);
+   return `the artist at index ${indexN} is 
+${array[indexN].name}`);
 }
 
 getArtistByIndex(artists, 0);
