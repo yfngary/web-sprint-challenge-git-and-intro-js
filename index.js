@@ -238,7 +238,7 @@ function getArtistByIndex(array, indexN) {
 ${artistName}`;
 }
 
-console.log(getArtistByIndex(artists, 7));
+getArtistByIndex(artists, 0);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use listOfNames to do the following: 
@@ -250,15 +250,9 @@ Use listOfNames to do the following:
 
 function listOfNames(array) {
   const arrayOfNames = [...array];
-for(let i = 0; i < arrayOfNames.length; i++){
-delete arrayOfNames[i]["id"];
-delete arrayOfNames[i]["genre"];
-delete arrayOfNames[i]["nationality"];
-delete arrayOfNames[i]["wikipedia"];
-delete arrayOfNames[i]["paintings"];
-delete arrayOfNames[i]["bio"];
-delete arrayOfNames[i]["years"];
-} return(arrayOfNames);
+  for (let i = 0; i < array.length; i++){
+console.log(arrayOfNames[i].name);
+}
 }
 
 listOfNames(artists);
@@ -368,12 +362,12 @@ function artistByCountry(array, artNationality){
     const nationArray = []
   for(let i = 0; i < array.length; i++){
     if(array[i].nationality === artNationality){
-      nationArray.unshift(array[i]);
+      nationArray.unshift(array[i].name);
     }
-  }
-  return(nationArray);
-}
-
+  }  
+  console.log(nationArray);
+}   
+   
 artistByCountry(artists, "Spanish");
 
 /* ***** END OF TASKS ***** */
